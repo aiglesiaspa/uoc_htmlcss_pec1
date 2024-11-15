@@ -262,6 +262,24 @@ dd span{
     font-weight: 500;
 }
 
+button {
+    background-color: #2e2e30b3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #6a1b1b;
+}
+
+
 
 /* --------------- PIE DE PÁGINA - Común en las 3 páginas ---------------*/
 
