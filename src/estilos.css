@@ -355,6 +355,29 @@ button {
     }
 }
 
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1.animated {
+    animation: bounce 1s ease-in-out infinite;
+    color: #4c0d06;
+}
+
 
 
 /* --------------- PIE DE PÁGINA - Común en las 3 páginas ---------------*/
