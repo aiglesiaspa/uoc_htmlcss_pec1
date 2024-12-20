@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="img/trasmoz.jpg">
+    <link rel="icon" href="img/villa_trasmoz.png">
     <link rel="stylesheet" href="estilos.css">
     <script type="module" src="app.js"></script>
   </head>
@@ -36,18 +36,13 @@
           sorprendente de flora y fauna.
         </p>
 
-        <p>
-          El paisaje del parque incluye desde bosques mediterráneos de encinas en las zonas bajas, hasta densos hayedos y pinares en cotas medias, 
-          y praderas alpinas en la cima. La fauna local incluye especies emblemáticas como el corzo, el jabalí y aves como el águila real y el 
-          búho real, siendo un atractivo para los observadores de naturaleza y fotógrafos.
-        </p>
-
         <div class="imagen">
           <figure>
-            <img
-              src="img/moncayo.jpg"
-              alt="Fotografía del Parque Natural de Moncayo"
-            />
+            <picture>
+              <source media="(max-width: 820px)" srcset="img/moncayo-mobile.webp?as=webp"/>
+              <source media="(min-width: 821px)" srcset="img/moncayo.webp?as=webp"/>
+              <img src="img/moncayo.webp" alt="Fotografía del Parque Natural de Moncayo"/>
+            </picture>
             <figcaption>
               Vista del Parque Natural de Moncayo | Fotografía de <a href="https://www.ecoturismo.com/declaracion-del-parque-natural-de-moncayo">Ecoturismo</a>
             </figcaption>
@@ -55,10 +50,29 @@
         </div>
 
         <p>
+          El paisaje del parque incluye desde bosques mediterráneos de encinas en las zonas bajas, hasta densos hayedos y pinares en cotas medias, 
+          y praderas alpinas en la cima. La fauna local incluye especies emblemáticas como el corzo, el jabalí y aves como el águila real y el 
+          búho real, siendo un atractivo para los observadores de naturaleza y fotógrafos.
+        </p>
+
+        <p>
           Culturalmente, el Moncayo tiene una fuerte conexión con leyendas y personajes históricos. Inspiró al poeta romántico Gustavo Adolfo 
           Bécquer, quien escribió sobre las historias y misticismo de la región, y se encuentra cerca del Monasterio de Veruela, otro lugar de 
           interés histórico.
         </p>
+
+        <div class="imagen">
+          <figure>
+            <img
+              src="img/veruela.webp"
+              alt="Fotografía del interior del Monasterio de Veruela"
+              width="600"
+            />
+            <figcaption>
+              Interior del Monasterio de Veruela | Fotografía de <a href="https://www.turismodearagon.com/ficha/monasterio-de-veruela-vera-de-moncayo/">Turismo de Aragón</a>
+            </figcaption>
+          </figure>
+        </div>
           
         <p>
           El parque ofrece diversas rutas de senderismo adaptadas a todos los niveles, entre ellas el popular ascenso a la cumbre y senderos 
@@ -77,6 +91,19 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
             </iframe>
             <figcaption>Presentación del parque y ascenso a el Moncayo</figcaption>
+          </figure>
+        </div>
+
+        <div class="imagen">
+          <figure>
+            <img
+              src="img/mapa.webp?as=webp"
+              alt="Mapa del Parque Natural"
+              width="900"
+            />
+            <figcaption>
+              Mapa del Parque Natural de Moncayo | Fotografía de <a href="https://www.rednaturaldearagon.com/rutas-y-senderos-de-la-red-natural-de-aragon/">Red Natural de Aragón</a>
+            </figcaption>
           </figure>
         </div>
 

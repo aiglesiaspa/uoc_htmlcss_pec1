@@ -12,7 +12,7 @@ body{
 
 /* --------------- CABECERA - Común en las 3 páginas ---------------*/
 header{
-    background-image: url(img/trasmoz.jpg);
+    background-image: url(img/trasmoz.webp);
     background-position: center center;
     background-size: cover;
     /*margin-top:-16px;*/
@@ -71,8 +71,13 @@ header div a[class=img]{
 
 /*--------------- PAGINA INDEX ---------------*/
 
+html[class=index] {
+    background-color: #4c0d06;
+    height: 100%;
+}
+
 body[class=index]{
-    background-image: url(img/trasmoz.jpg);
+    background-image: url(img/trasmoz.webp);
     background-size: cover;
     max-width: 100vw;
     min-height: 100vh;
@@ -82,6 +87,12 @@ body[class=index]{
     background-attachment: fixed; /* Imagen fija para cubrir todo el fondo */
     display: flex;
     flex-direction: column;
+    clip-path: polygon(5% 25%, 25% 25%, 25% 0, 75% 0, 75% 25%, 95% 25%, 95% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 5% 50%);
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 50% 100%, 0 70%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    
+
+
 }
 
 header[class=index]{
@@ -116,8 +127,9 @@ footer[class=index]{
     text-align: center;
     padding: 0;
     font-size: 2rem;
-    margin-top: auto;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: auto;
+    display: block;
 
 }
 
@@ -202,6 +214,7 @@ figcaption{
     font-weight: 300;
     font-size: 0.7rem;
     text-align: left;
+    margin-top: 3px;
 }
 
 h2{
@@ -238,29 +251,47 @@ section[class=fuentes] ul li a{
     text-decoration: none;
 }
 
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+dl>div{
+    border: 1px solid rgb(229, 225, 254);
+}
+
 dl{
     line-height: 20px;
     max-width: 96%;
 }
+
 dt{
     font-weight: 700;
-    padding-left: 40px;
-    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
     font-size: 1.2rem;
-    margin-top: 20px;
+    margin-top: 10px;
     color:#4c0d06;
 }
 
 dd{
     font-weight: 300;
-    border-left: 3px solid #4c0d06;
-    padding-left: 30px;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 5px;
     font-size: 0.9rem;
 }
 
 dd span{
     font-weight: 500;
 }
+
+.elem-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
 
 button {
     background-color: #2e2e30b3;
@@ -279,6 +310,51 @@ button {
     background-color: #6a1b1b;
 }
 
+/* --------------- SVG PÁGINA PRESENTACIÓN ---------------*/
+
+.svg-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+  
+  .animated-svg {
+    position: absolute;
+    animation: move-around-image 5s infinite;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    transform-origin: center; /* alrededor imagen */
+  }
+  
+  .background {
+    fill: none;
+  }
+  
+  @keyframes move-around-image {
+    0% {
+        transform: rotate(0deg) translateX(170px) rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(90deg) translateX(170px) rotate(-90deg);
+    }
+    
+    50% {
+        transform: rotate(180deg) translateX(170px) rotate(-180deg);
+    }
+    
+    75% {
+        transform: rotate(270deg) translateX(170px) rotate(-270deg);
+    }
+    
+    100% {
+        transform: rotate(360deg) translateX(170px) rotate(-360deg);
+    }
+}
+
 
 
 /* --------------- PIE DE PÁGINA - Común en las 3 páginas ---------------*/
@@ -287,7 +363,11 @@ footer {
     background-color: #2e2e30b3;
     color: #FFF;
     margin: 50px 0 0 0;
-    padding: 10px 0 25px 200px;
+    padding: 10px 200px 10px 200px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
 
 }
 
@@ -310,10 +390,18 @@ footer ul li a{
     
 }
 
+footer img{
+    margin-right: 10px;
+}
+
 footer p{
     font-size: 0.7rem;
     font-weight: 300;
     margin: 10px 0px;
+}
+
+ul[class=legal] li a  {
+    font-size: 0.75rem;
 }
 
 /* --------------- MEDIA QUERIES ---------------*/
@@ -323,11 +411,11 @@ footer p{
 @media (max-width: 480px) {
     
     body {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
     
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin: 20px 5px;
     }
     
@@ -345,12 +433,18 @@ footer p{
     }
 
     h1[class=index]{
-        font-size: 3.5rem;
+        font-size: 3.3rem;
         margin-top: 30%;
     }
     
     h2[class=index]{
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    footer[class=index]{
+        margin-top: auto;
+        margin-bottom: 30px;
+        font-size: 1rem;
     }
 
     footer[class=index] div ul li{
@@ -359,11 +453,41 @@ footer p{
     }
 
     footer[class=index] div p{
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
 
     header[class=index]{
         font-size: 1.1rem;
+    }
+
+    body[class=index] {
+        clip-path: polygon(0 0, 100% 0%, 100% 70%, 50% 100%, 0 70%);
+    }
+
+    .grid-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @keyframes move-around-image {
+        0% {
+            transform: rotate(0deg) translateX(100px) rotate(0deg);
+        }
+        
+        25% {
+            transform: rotate(90deg) translateX(100px) rotate(-90deg);
+        }
+        
+        50% {
+            transform: rotate(180deg) translateX(100px) rotate(-180deg);
+        }
+        
+        75% {
+            transform: rotate(270deg) translateX(100px) rotate(-270deg);
+        }
+        
+        100% {
+            transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        }
     }
 }
 
@@ -384,7 +508,25 @@ footer p{
     h1[class=index]{
         margin-top: 30%;
     }
+
+    nav ul li {
+        display: block; /* Lo apilamos verticalmente ya que la navegación y dimensiones en móvil son verticales */
+        margin-bottom: 10px;
+    }
+
+    footer[class=index]{
+        margin-top: 20px;
+        margin-bottom: auto;
+        font-size: 1.3rem;
+    }
     
+    body[class=index] {
+        clip-path: polygon(0 0, 100% 0%, 100% 70%, 50% 100%, 0 70%);
+    }
+
+    .grid-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
