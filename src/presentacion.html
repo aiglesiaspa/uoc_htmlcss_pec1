@@ -11,7 +11,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
 
     <link rel="preload" href="img/logo.png" as="image" type="image/png">
-    
+
     <link rel="icon" href="img/villa_trasmoz.png">
     <link rel="stylesheet" href="estilos.css">
   </head>
@@ -38,6 +38,7 @@
         </p>
 
         <div class="video">
+          <!--
           <figure>
             <iframe 
               width="610" 
@@ -49,6 +50,8 @@
             </iframe>
             <figcaption>Feria de brujas de Trasmoz</figcaption>
           </figure>
+          -->
+          <iframe id="ytplayer" class="ytplayer" width="610" height="315" data-src="https://www.youtube.com/embed/gh8JQz_MOGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="background: url(https://i.ytimg.com/vi/gh8JQz_MOGY/hqdefault.jpg);background-size:100%;background-position:center;"></iframe><script>var ytplayers = document.getElementsByClassName("ytplayer"); var loaded = []; for (var i = 0; i < ytplayers.length; i++) { loaded[i] = false; } window.addEventListener("scroll", function() { for (var i = 0; i < ytplayers.length; i++) { if (!loaded[i] && window.scrollY > 0) { ytplayers[i].src = ytplayers[i].getAttribute("data-src"); loaded[i] = true; } } });</script>
         </div>
 
         <p>
