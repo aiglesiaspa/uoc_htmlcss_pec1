@@ -8,11 +8,12 @@
     <!-- import de Fira Sans (300,500,700,900) de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
 
+    <link rel="preload" href="img/logo.png" as="image" type="image/png">
+    
     <link rel="icon" href="img/villa_trasmoz.png">
     <link rel="stylesheet" href="estilos.css">
-    <script type="module" src="app.js"></script>
   </head>
 
   <body>
@@ -37,7 +38,7 @@
 
           <div>
             <div class="elem-image">
-              <img src="img/historia.webp" alt="Fotografía de un edificio histórico de Trasmoz">
+              <img src="img/historia.webp" alt="Fotografía de un edificio histórico de Trasmoz" loading="lazy">
             </div>
             <dt>Historia</dt>
             <dd>
@@ -50,7 +51,7 @@
 
           <div>
             <div class="elem-image">
-              <img src="img/moncayo.webp" alt="Fotografía del parque del Moncayo">
+              <img src="img/moncayo.webp" alt="Fotografía del parque del Moncayo" loading="lazy">
             </div>
             <dt>Parque natural del Moncayo</dt>
             <dd>
@@ -63,7 +64,7 @@
 
           <div>
             <div class="elem-image">
-              <img src="img/becquer.webp" alt="Fotogafía de un retrato de Bécquer dibujado en el lateral de una casa de Trasmoz">
+              <img src="img/becquer.webp" alt="Fotogafía de un retrato de Bécquer dibujado en el lateral de una casa de Trasmoz" loading="lazy">
             </div>
             <dt>Gustavo Adolfo Bécquer y la brujería</dt>
             <dd>
@@ -77,7 +78,7 @@
 
           <div>
             <div class="elem-image">
-              <img src="img/castillo.webp" alt="Fotografía del exterior del Castillo de Trasmoz">
+              <img src="img/castillo.webp" alt="Fotografía del exterior del Castillo de Trasmoz" loading="lazy">
             </div>
             <dt>Castillo de Trasmoz y Museo de las Brujas</dt>
             <dd>
@@ -92,7 +93,7 @@
 
           <div>
             <div class="elem-image">
-              <img src="img/brujas.webp" alt="Fotografía de la escultura de una bruja situada en Trasmoz">
+              <img src="img/brujas.webp" alt="Fotografía de la escultura de una bruja situada en Trasmoz" loading="lazy">
             </div>
             <dt>Celebración de el "Día de las Brujas"</dt>
             <dd>
@@ -117,6 +118,8 @@
 
     <!-- And here is our main footer that is used across all the pages of our website -->
     <include src="./src/footer.html"></include>
+
+    <script type="module" src="app.js"></script>
 
   </body>
 </html>

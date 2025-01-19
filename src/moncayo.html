@@ -8,11 +8,12 @@
     <!-- import de Fira Sans (300,500,700,900) de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans:wght@300;500;700;900&display=swap" rel="stylesheet">
 
+    <link rel="preload" href="img/logo.png" as="image" type="image/png">
+    
     <link rel="icon" href="img/villa_trasmoz.png">
     <link rel="stylesheet" href="estilos.css">
-    <script type="module" src="app.js"></script>
   </head>
 
   <body>
@@ -41,7 +42,7 @@
             <picture>
               <source media="(max-width: 820px)" srcset="img/moncayo-mobile.webp?as=webp"/>
               <source media="(min-width: 821px)" srcset="img/moncayo.webp?as=webp"/>
-              <img src="img/moncayo.webp" alt="Fotografía del Parque Natural de Moncayo"/>
+              <img src="img/moncayo.webp" alt="Fotografía del Parque Natural de Moncayo" loading="lazy"/>
             </picture>
             <figcaption>
               Vista del Parque Natural de Moncayo | Fotografía de <a href="https://www.ecoturismo.com/declaracion-del-parque-natural-de-moncayo">Ecoturismo</a>
@@ -67,6 +68,7 @@
               src="img/veruela.webp"
               alt="Fotografía del interior del Monasterio de Veruela"
               width="600"
+              loading="lazy"
             />
             <figcaption>
               Interior del Monasterio de Veruela | Fotografía de <a href="https://www.turismodearagon.com/ficha/monasterio-de-veruela-vera-de-moncayo/">Turismo de Aragón</a>
@@ -88,7 +90,8 @@
               height="315" 
               src="https://www.youtube.com/embed/tUuNJ_ac2OM?si=cUHbCQvR0lWfCCHc" 
               title="YouTube video player" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+              loading="lazy">
             </iframe>
             <figcaption>Presentación del parque y ascenso a el Moncayo</figcaption>
           </figure>
@@ -100,6 +103,7 @@
               src="img/mapa.webp?as=webp"
               alt="Mapa del Parque Natural"
               width="900"
+              loading="lazy"
             />
             <figcaption>
               Mapa del Parque Natural de Moncayo | Fotografía de <a href="https://www.rednaturaldearagon.com/rutas-y-senderos-de-la-red-natural-de-aragon/">Red Natural de Aragón</a>
@@ -115,6 +119,8 @@
 
     <!-- And here is our main footer that is used across all the pages of our website -->
     <include src="./src/footer.html"></include>
+
+    <script type="module" src="app.js"></script>
 
   </body>
 </html>
